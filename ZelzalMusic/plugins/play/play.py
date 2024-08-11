@@ -10,7 +10,7 @@ from pytgcalls.exceptions import NoActiveGroupCall
 
 import config
 from config import BANNED_USERS, lyrical
-from ZelzalMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app, EMOJIS, YTB
+from ZelzalMusic import Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app, YTB
 from ZelzalMusic.core.call import Zelzaly
 from ZelzalMusic.utils import seconds_to_min, time_to_seconds
 from ZelzalMusic.utils.channelplay import get_channeplayCB
