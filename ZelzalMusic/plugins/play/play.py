@@ -647,67 +647,58 @@ async def play_playlists_command(client, CallbackQuery, _):
         cplay,
         fplay,
     ) = callback_request.split("|")
+    
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(_["playcb_1"], show_alert=True)
         except:
             return
+
     try:
         chat_id, channel = await get_channeplayCB(_, cplay, CallbackQuery)
     except:
         return
-    user_name = CallbackQuery.from_user.first_name
-    await CallbackQuery.message.delete()
-    try:
-        try:
-    await CallbackQuery.message.delete()
-    await CallbackQuery.answer()
-except:
-    pass
 
-mystic = await CallbackQuery.message.reply_text(
-    _["play_2"].format(channel) if channel else ""
-)
+    user_name = CallbackQuery.from_user.first_name
+
+    try:
+        await CallbackQuery.message.delete()
+        await CallbackQuery.answer()
+    except:
+        pass
+
+    mystic = await CallbackQuery.message.reply_text(
+        _["play_2"].format(channel) if channel else ""
+    )
+
     videoid = lyrical.get(videoid)
     video = True if mode == "v" else None
     ffplay = True if fplay == "f" else None
     spotify = True
-    if ptype == "yt":
-        spotify = False
-        try:
+
+    try:
+        if ptype == "yt":
+            spotify = False
             result = await YouTube.playlist(
                 videoid,
                 config.PLAYLIST_FETCH_LIMIT,
                 CallbackQuery.from_user.id,
                 True,
             )
-        except:
-
-            await mystic.edit_text(_["play_3"])
-    if ptype == "spplay":
-        try:
+        elif ptype == "spplay":
             result, spotify_id = await Spotify.playlist(videoid)
-        except:
-
-            await mystic.edit_text(_["play_3"])
-    if ptype == "spalbum":
-        try:
+        elif ptype == "spalbum":
             result, spotify_id = await Spotify.album(videoid)
-        except:
-
-            await mystic.edit_text(_["play_3"])
-    if ptype == "spartist":
-        try:
+        elif ptype == "spartist":
             result, spotify_id = await Spotify.artist(videoid)
-        except:
-
-            await mystic.edit_text(_["play_3"])
-    if ptype == "apple":
-        try:
+        elif ptype == "apple":
             result, apple_id = await Apple.playlist(videoid, True)
-        except:
+        else:
+            raise ValueError("Unknown playlist type")
+    except:
+        await mystic.edit_text(_["play_3"])
+        return
 
-            await mystic.edit_text(_["play_3"])
     try:
         await stream(
             _,
@@ -727,6 +718,7 @@ mystic = await CallbackQuery.message.reply_text(
         err = e if ex_type == "AssistantErr" else _["general_2"].format(ex_type)
         print(e)
         return await mystic.edit_text(e)
+
     return await mystic.delete()
 
 
