@@ -91,9 +91,9 @@ async def play_commnd(
 
     await add_served_chat(message.chat.id)
 
-mystic = await message.reply_text(
-    _["play_2"].format(channel) if channel else ""
-)
+    mystic = await message.reply_text(
+        _["play_2"].format(channel) if channel else ""
+    )
     plist_id = None
     slider = None
     plist_type = None
