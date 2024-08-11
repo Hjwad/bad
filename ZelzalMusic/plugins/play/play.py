@@ -90,10 +90,10 @@ async def play_commnd(
         user_last_message_time[user_id] = current_time
 
     await add_served_chat(message.chat.id)
-    Emoji = random.choice(EMOJIS)
-    mystic = await message.reply_text(
-        _["play_2"].format(channel) if channel else _[Emoji]
-    )
+
+mystic = await message.reply_text(
+    _["play_2"].format(channel) if channel else ""
+)
     plist_id = None
     slider = None
     plist_type = None
@@ -554,17 +554,19 @@ async def play_music(client, CallbackQuery, _):
         return
     user_name = CallbackQuery.from_user.first_name
     try:
-        await CallbackQuery.message.delete()
-        await CallbackQuery.answer()
-    except:
-        pass
-    Emoji = random.choice(EMOJIS)
-    mystic = await CallbackQuery.message.reply_text(
-        _["play_2"].format(channel) if channel else _[Emoji]
-    )
-    try:
-        details, track_id = await YouTube.track(vidid, True)
-    except:
+    await CallbackQuery.message.delete()
+    await CallbackQuery.answer()
+except:
+    pass
+
+mystic = await CallbackQuery.message.reply_text(
+    _["play_2"].format(channel) if channel else ""  # ترك النص فارغًا
+)
+
+try:
+    details, track_id = await YouTube.track(vidid, True)
+except:
+    pass
 
         await mystic.edit_text(_["play_3"])
     if details["duration_min"]:
@@ -645,13 +647,15 @@ async def play_playlists_command(client, CallbackQuery, _):
     user_name = CallbackQuery.from_user.first_name
     await CallbackQuery.message.delete()
     try:
-        await CallbackQuery.answer()
-    except:
-        pass
-    Emoji = random.choice(EMOJIS)
-    mystic = await CallbackQuery.message.reply_text(
-        _["play_2"].format(channel) if channel else _[Emoji]
-    )
+        try:
+    await CallbackQuery.message.delete()
+    await CallbackQuery.answer()
+except:
+    pass
+
+mystic = await CallbackQuery.message.reply_text(
+    _["play_2"].format(channel) if channel else ""
+)
     videoid = lyrical.get(videoid)
     video = True if mode == "v" else None
     ffplay = True if fplay == "f" else None
