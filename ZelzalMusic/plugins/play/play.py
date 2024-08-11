@@ -543,72 +543,84 @@ async def play_music(client, CallbackQuery, _):
     callback_data = CallbackQuery.data.strip()
     callback_request = callback_data.split(None, 1)[1]
     vidid, user_id, mode, cplay, fplay = callback_request.split("|")
+    
     if CallbackQuery.from_user.id != int(user_id):
         try:
             return await CallbackQuery.answer(_["playcb_1"], show_alert=True)
         except:
             return
+
     try:
         chat_id, channel = await get_channeplayCB(_, cplay, CallbackQuery)
     except:
         return
+    
     user_name = CallbackQuery.from_user.first_name
+    
     try:
-    await CallbackQuery.message.delete()
-    await CallbackQuery.answer()
-except:
-    pass
+        await CallbackQuery.message.delete()
+        await CallbackQuery.answer()
+    except:
+        pass
+    
+    mystic = await CallbackQuery.message.reply_text(
+        _["play_2"].format(channel) if channel else ""  # ترك النص فارغًا
+    )
 
-mystic = await CallbackQuery.message.reply_text(
-    _["play_2"].format(channel) if channel else ""  # ترك النص فارغًا
-)
+    try:
+        details, track_id = await YouTube.track(vidid, True)
+    except:
+        pass
 
-try:
-    details, track_id = await YouTube.track(vidid, True)
-except:
-    pass
-
+    try:
         await mystic.edit_text(_["play_3"])
-    if details["duration_min"]:
-        duration_sec = time_to_seconds(details["duration_min"])
-        if duration_sec > config.DURATION_LIMIT:
-            return await mystic.edit_text(
-                _["play_6"].format(config.DURATION_LIMIT_MIN, app.mention)
+        if details["duration_min"]:
+            duration_sec = time_to_seconds(details["duration_min"])
+            if duration_sec > config.DURATION_LIMIT:
+                return await mystic.edit_text(
+                    _["play_6"].format(config.DURATION_LIMIT_MIN, app.mention)
+                )
+        else:
+            buttons = livestream_markup(
+                _,
+                track_id,
+                CallbackQuery.from_user.id,
+                mode,
+                "c" if cplay == "c" else "g",
+                "f" if fplay else "d",
             )
-    else:
-        buttons = livestream_markup(
-            _,
-            track_id,
-            CallbackQuery.from_user.id,
-            mode,
-            "c" if cplay == "c" else "g",
-            "f" if fplay else "d",
-        )
-        return await mystic.edit_text(
-            _["play_13"],
-            reply_markup=InlineKeyboardMarkup(buttons),
-        )
-    video = True if mode == "v" else None
-    ffplay = True if fplay == "f" else None
-    try:
-        await stream(
-            _,
-            mystic,
-            CallbackQuery.from_user.id,
-            details,
-            chat_id,
-            user_name,
-            CallbackQuery.message.chat.id,
-            video,
-            streamtype="youtube",
-            forceplay=ffplay,
-        )
+            return await mystic.edit_text(
+                _["play_13"],
+                reply_markup=InlineKeyboardMarkup(buttons),
+            )
+        
+        video = True if mode == "v" else None
+        ffplay = True if fplay == "f" else None
+        
+        try:
+            await stream(
+                _,
+                mystic,
+                CallbackQuery.from_user.id,
+                details,
+                chat_id,
+                user_name,
+                CallbackQuery.message.chat.id,
+                video,
+                streamtype="youtube",
+                forceplay=ffplay,
+            )
+        except Exception as e:
+            ex_type = type(e).__name__
+            err = e if ex_type == "AssistantErr" else _["general_2"].format(ex_type)
+            print(e)
+            return await mystic.edit_text(e)
+        
+        return await mystic.delete()
+    
     except Exception as e:
-        ex_type = type(e).__name__
-        err = e if ex_type == "AssistantErr" else _["general_2"].format(ex_type)
         print(e)
-        return await mystic.edit_text(e)
-    return await mystic.delete()
+        return await mystic.edit_text(_["general_2"].format(type(e).__name__))
 
 
 @app.on_callback_query(filters.regex("ZelzalymousAdmin") & ~BANNED_USERS)
