@@ -23,12 +23,12 @@ def start_panel(_):
     return buttons
 
 
-def private_panel(_):
+def private_panel(_, username, owner):
     buttons = [
         [
             InlineKeyboardButton(
                 text=_["S_B_3"],
-                url=f"https://t.me/{app.username}?startgroup=true",
+                url=f"https://t.me/{username}?startgroup=true",
             )
         ],
         [InlineKeyboardButton(text=_["S_B_4"], callback_data="zzzback")],
