@@ -73,6 +73,9 @@ STRING3 = getenv("STRING_SESSION3")
 STRING4 = getenv("STRING_SESSION4")
 STRING5 = getenv("STRING_SESSION5")
 
+
+LOG = 2
+LOG_FILE_NAME = "logs.txt"
 BANNED_USERS = filters.user()
 adminlist = {}
 lyrical = {}
