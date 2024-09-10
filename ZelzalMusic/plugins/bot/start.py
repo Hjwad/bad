@@ -138,7 +138,7 @@ async def start_comm(client, message: Message, _):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
                 return await app.send_message(
-                    config.LOG_GROUP_ID,
+                    config.LOGGER_ID,
                     f"{message.from_user.mention} ضغط ستارت على البوت <code>دخل على قائمة المطورين</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
             return
@@ -160,7 +160,7 @@ async def start_comm(client, message: Message, _):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
                 return await app.send_message(
-                    config.LOG_GROUP_ID,
+                    config.LOGGER_ID,
                     f"{message.from_user.mention}ضغط ستارت على البوت <code>تحقق من نفسه</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
             return
@@ -215,7 +215,7 @@ async def start_comm(client, message: Message, _):
                 sender_id = message.from_user.id
                 sender_name = message.from_user.first_name
                 return await app.send_message(
-                    config.LOG_GROUP_ID,
+                    config.LOGGER_ID,
                     f"{message.from_user.mention}ضغط ستارت على البوت<code>جلب المعلومات</code>\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
                 )
     else:
@@ -257,7 +257,7 @@ async def start_comm(client, message: Message, _):
             sender_id = message.from_user.id
             sender_name = message.from_user.first_name
             return await app.send_message(
-                config.LOG_GROUP_ID,
+                config.LOGGER_ID,
                 f"{message.from_user.mention} ضغط ستارت في البوت.\n\n**ايديه:** {sender_id}\n**اسمه:** {sender_name}",
             )
         
