@@ -18,8 +18,7 @@ from config import (OWNER_ID ,
 	         SUPPORT_CHANNEL,
 	         BOT_TOKEN,
 	         BANNED_USERS)
-from strings.filters import command
-from strings import get_string
+from strings import get_string, get_command
 from ZelzalMusic import Telegram, YouTube, app
 from ZelzalMusic.misc import SUDOERS, _boot_
 from ZelzalMusic.plugins.sudo.sudoers import sudoers_list
