@@ -19,6 +19,7 @@ from config import (OWNER_ID ,
 	         BOT_TOKEN,
 	         BANNED_USERS)
 from strings.filters import command, get_string
+from strings import command, get_string
 from ZelzalMusic import Telegram, YouTube, app
 from ZelzalMusic.misc import SUDOERS, _boot_
 from ZelzalMusic.plugins.playlist import del_plist_msg
