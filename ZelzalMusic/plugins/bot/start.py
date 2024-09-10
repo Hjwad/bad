@@ -243,10 +243,11 @@ async def start_comm(client, message: Message, _):
                 )
     
             except:
-                await message.reply_text(
-                    _["start_2"].format(config.MUSIC_BOT_NAME),
-                    reply_markup=InlineKeyboardMarkup(out),
-                )
+                await message.reply_photo(
+    photo=config.START_IMG_URL,
+    caption=_["start_2"].format(config.MUSIC_BOT_NAME, "some other value"),
+    reply_markup=InlineKeyboardMarkup(out),
+)
         else:
             await message.reply_text(
                 _["start_2"].format(config.MUSIC_BOT_NAME),
