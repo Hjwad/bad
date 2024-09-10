@@ -29,8 +29,8 @@ from ZelzalMusic.utils.database import (add_served_chat,
                                        get_served_users,
                                        blacklisted_chats,
                                        get_assistant, get_lang,
-                                       get_userss, is_on_off,
-                                       is_served_private_chat)
+                                       get_userss, is_on_off)
+                                       
 from ZelzalMusic.utils.decorators.language import LanguageStart
 from ZelzalMusic.utils.formatters import get_readable_time
 from ZelzalMusic.utils.inline import (help_pannel, private_panel,
