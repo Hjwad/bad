@@ -341,8 +341,8 @@ async def app_start(c:Client,m:Message):
 	user = m.from_user.id
 	mm = m.from_user.mention
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	Sudo = open(f"sudo{bot_id}.json","r").read()
 	banD = open(f"band{bot_id}.json","r").read()
 	
@@ -390,7 +390,7 @@ async def app_start(c:Client,m:Message):
 async def __count(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if  str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -417,7 +417,7 @@ async def __count(c:Client,m:Message):
 async def close__(_,query:CallbackQuery):
 	user = query.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -430,7 +430,7 @@ async def close__(_,query:CallbackQuery):
 async def del_keyboard(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -441,7 +441,7 @@ async def del_keyboard(c:Client,m:Message):
 async def __get_copy(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -489,7 +489,7 @@ async def __get_copy(c:Client,m:Message):
 async def show_groups(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -513,7 +513,7 @@ async def show_groups(c:Client,m:Message):
 async def __gcopy(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -534,7 +534,7 @@ async def __gcopy(c:Client,m:Message):
 async def get_groups_count(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -548,7 +548,7 @@ async def get_groups_count(c:Client,m:Message):
 async def show_links(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -571,7 +571,7 @@ async def show_links(c:Client,m:Message):
 async def get_copy___band(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -591,7 +591,7 @@ async def get_copy___band(c:Client,m:Message):
 async def countofuserBan(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -610,7 +610,7 @@ async def countofuserBan(c:Client,m:Message):
 async def ShowMain(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		file = open(f"maindevs{bot_id}.json","r")
@@ -632,7 +632,7 @@ async def ShowMain(c:Client,m:Message):
 async def get_MainSudo(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		file = open(f"maindevs{bot_id}.json","rb")
@@ -650,7 +650,7 @@ async def get_MainSudo(c:Client,m:Message):
 async def countofDev(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		l = await m.reply("**◍ جاري حساب عدد اساسيين البوت√**")
@@ -667,7 +667,7 @@ async def countofDev(c:Client,m:Message):
 async def __show_sudos(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -689,7 +689,7 @@ async def __show_sudos(c:Client,m:Message):
 async def countofsudos(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -705,7 +705,7 @@ async def countofsudos(c:Client,m:Message):
 async def get_copy_Sudo(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -726,7 +726,7 @@ async def get_copy_Sudo(c:Client,m:Message):
 async def show_users(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -748,7 +748,7 @@ async def show_users(c:Client,m:Message):
 async def __get_users_copy(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -767,7 +767,7 @@ async def __get_users_copy(c:Client,m:Message):
 async def countofusers(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -784,7 +784,7 @@ async def countofusers(c:Client,m:Message):
 @app.on_message(filters.command("اضف قناة اشتراك اجباري","")&filters.private)
 async def AddKey(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف القناه بدون @**')
 		if ask.text == "الغاء":
@@ -803,7 +803,7 @@ async def AddKey(c:Client,m:Message):
 @app.on_message(filters.command("عرض قناة الاشتراك","")&filters.private)
 async def ShowKey(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_channel()} قناه الاشتراك**")
 	
@@ -811,7 +811,7 @@ async def ShowKey(c:Client,m:Message):
 @app.on_message(filters.command("حذف قناه الاشتراك","")&filters.private)
 async def DellKey(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
@@ -824,7 +824,7 @@ async def DellKey(c:Client,m:Message):
 @app.on_message(filters.command("اضافه قناه المطور","")&filters.private)
 async def AddChannel(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف قناه المطور بدون @**')
 		if ask.text == "الغاء":
@@ -843,7 +843,7 @@ async def AddChannel(c:Client,m:Message):
 @app.on_message(filters.command("عرض قناة المطور","")&filters.private)
 async def ShowDevKey(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_devchannel()} قناه المطور**")
 	
@@ -851,7 +851,7 @@ async def ShowDevKey(c:Client,m:Message):
 @app.on_message(filters.command("حذف قناه المطور","")&filters.private)
 async def DellDevKey(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_devchannel()
@@ -864,7 +864,7 @@ async def DellDevKey(c:Client,m:Message):
 @app.on_message(filters.command("اضافه معرف المطور","")&filters.private)
 async def AddDevUser(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف المطور بدون @**')
 		if ask.text == "الغاء":
@@ -883,7 +883,7 @@ async def AddDevUser(c:Client,m:Message):
 @app.on_message(filters.command("عرض معرف المطور","")&filters.private)
 async def ShowDevUser(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_devuser()} معرف المطور**")
 	
@@ -891,7 +891,7 @@ async def ShowDevUser(c:Client,m:Message):
 @app.on_message(filters.command("حذف معرف المطور","")&filters.private)
 async def DellDevUser(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_devuser()
@@ -1006,7 +1006,7 @@ async def AddMain(c:Client,m:Message):
 	chat = m.chat.id	
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner:
 		
 		ask = await m.reply(chat,"**ارسل ايدي المطور الاساسي ")
@@ -1038,7 +1038,7 @@ async def DelMain(c:Client,m:Message):
 	chat = m.chat.id	
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		
 		ask = await m.reply(chat,"**ارسل ايدي المطور الاساسي**")
@@ -1071,7 +1071,7 @@ url=f"https://t.me/{show_devchannel()}")]])
 @app.on_message(filters.command("حذف الاساسيين","")&filters.private)
 async def DelAllMain(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
@@ -1087,7 +1087,7 @@ async def AddSudo(c:Client,m:Message):
 	chat = m.chat.id	
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		
 		ask = await m.reply(chat,"**ارسل ايدي المطور")
@@ -1119,7 +1119,7 @@ async def DelSudo(c:Client,m:Message):
 	chat = m.chat.id	
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	if str(user) in mainSudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
 		
 		ask = await m.reply(chat,"**ارسل ايدي المطور**")
@@ -1151,7 +1151,7 @@ url=f"https://t.me/{show_devchannel()}")]])
 @app.on_message(filters.command("حذف المطورين","")&filters.private)
 async def DelAllSudo(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
@@ -1172,7 +1172,7 @@ async def UnBanUser(c:Client,m:Message):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner: 
@@ -1208,7 +1208,7 @@ url=f"https://t.me/{show_devchannel()}")]])
 async def ShowBan(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1232,7 +1232,7 @@ async def ShowBan(c:Client,m:Message):
 @app.on_message(filters.command("حذف المحظورين","")&filters.private)
 async def DelAllBan(c:Client,m:Message):
 	user = m.from_user.id
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	
 	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
@@ -1247,7 +1247,7 @@ async def AllCommand__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1307,7 +1307,7 @@ async def memcommands__(c,m:Message):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1338,7 +1338,7 @@ async def memcommands__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1370,7 +1370,7 @@ async def memcommands__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1403,7 +1403,7 @@ async def AllCommand__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1452,7 +1452,7 @@ async def memcommands__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1481,7 +1481,7 @@ async def memcommands__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
@@ -1510,7 +1510,7 @@ async def memcommands__(c,m):
 	user = m.from_user.id
 	chat = m.chat.id
 	mainSudo = open(f"maindevs{bot_id}.json","r").read()
-	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
+	if (str(user) in mainSudo or      str(user) in sudo or      str(user) in mainSudoVII or      (int(user) if isinstance(user, str) and user.isdigit() else user) in owner or      int(user) == dev_owner):
 	sudo = open(f"sudo{bot_id}.json","r").read()
 	
 	if str(user) in mainSudo or str(user) in sudo or str(user) in mainSudoVII or (user) in owner or int(user) == dev_owner:
