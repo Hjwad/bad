@@ -785,7 +785,7 @@ async def countofusers(c:Client,m:Message):
 async def AddKey(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف القناه بدون @**')
 		if ask.text == "الغاء":
 			await ask.request.delete()
@@ -804,7 +804,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def ShowKey(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_channel()} قناه الاشتراك**")
 	
 
@@ -813,7 +813,7 @@ async def DellKey(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
 	sudo = open(f"sudo{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_channel()
 	    
@@ -825,7 +825,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def AddChannel(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف قناه المطور بدون @**')
 		if ask.text == "الغاء":
 			await ask.request.delete()
@@ -844,7 +844,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def ShowDevKey(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_devchannel()} قناه المطور**")
 	
 
@@ -852,7 +852,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def DellDevKey(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_devchannel()
 	    
@@ -865,7 +865,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def AddDevUser(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 		ask = await m.reply('**معرف المطور بدون @**')
 		if ask.text == "الغاء":
 			await ask.request.delete()
@@ -884,7 +884,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def ShowDevUser(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	    return await m.reply(f"**@{show_devuser()} معرف المطور**")
 	
 
@@ -892,7 +892,7 @@ if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 async def DellDevUser(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_devuser()
 	    
@@ -1073,7 +1073,7 @@ async def DelAllMain(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
 	
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_all_main()
 	    
@@ -1153,7 +1153,7 @@ async def DelAllSudo(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
 	
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_all_sudo()
 	    
@@ -1234,7 +1234,7 @@ async def DelAllBan(c:Client,m:Message):
 	user = m.from_user.id
 	mainSudoVII = open(f"maindevsVII{bot_id}.json","r").read()
 	
-if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
+	if str(user) in mainSudoVII or str(user) in owner or int(user) == dev_owner:
 	     
 		del_all_ban()
 	    
