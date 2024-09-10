@@ -22,7 +22,7 @@ from strings.filters import command
 from strings import get_string
 from ZelzalMusic import Telegram, YouTube, app
 from ZelzalMusic.misc import SUDOERS, _boot_
-from ZelzalMusic.plugins.sudoers import sudoers_list
+from ZelzalMusic.plugins.sudo.sudoers import sudoers_list
 from ZelzalMusic.utils.database import (add_served_chat,
                                        add_served_user,
                                        get_served_chats,
