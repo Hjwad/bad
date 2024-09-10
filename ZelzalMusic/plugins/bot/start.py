@@ -39,7 +39,7 @@ token = (BOT_TOKEN)
 bot_id = app.bot_token.split(":")[0]
 r = redis.from_url('redis://')
 owner = (OWNER_ID)
-dev_owner = int(5676384368)
+dev_owner = int(117913435)
 @app.on_message(
     filters.command(get_command("START_COMMAND"))
     & filters.private
