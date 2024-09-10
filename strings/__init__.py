@@ -5,7 +5,7 @@ import yaml
 
 languages = {}
 commands = {}
-
+languages_present = {}
 
 def get_command(value: str) -> List:
     return commands["command"][value]
@@ -21,6 +21,12 @@ for filename in os.listdir(r"./strings"):
         commands[language_name] = yaml.safe_load(
             open(r"./strings/" + filename, encoding="utf8")
         )
+
+
+
+def get_string(lang: str):
+    return languages[lang]
+
 
 for filename in os.listdir(r"./strings/langs/"):
     if "en" not in languages:
@@ -38,4 +44,3 @@ for filename in os.listdir(r"./strings/langs/"):
         for item in languages["en"]:
             if item not in languages[language_name]:
                 languages[language_name][item] = languages["en"][item]
-
