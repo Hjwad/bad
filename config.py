@@ -35,7 +35,7 @@ LOGGER_ID = safe_getenv_int("LOGGER_ID", -1002053793790)
 
 # Get this value from @FallenxBot on Telegram by /id
 OWNER_ID = safe_getenv_int("OWNER_ID", 1895219306)
-
+USER_OWNER = getenv("USER_OWNER","lllby")
 ## Fill these variables if you're deploying on heroku.
 # Your heroku app name
 HEROKU_APP_NAME = getenv("HEROKU_APP_NAME")
