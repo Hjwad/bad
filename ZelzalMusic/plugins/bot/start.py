@@ -34,7 +34,7 @@ from ZelzalMusic.utils.database import (add_served_chat,
 from ZelzalMusic.utils.decorators.language import LanguageStart
 from ZelzalMusic.utils.formatters import get_readable_time
 from ZelzalMusic.utils.inline import (help_pannel, private_panel,
-                                     start_pannel)
+                                     start_panel)
 loop = asyncio.get_running_loop()
 token = (BOT_TOKEN)
 bot_id = app.bot_token.split(":")[0]
