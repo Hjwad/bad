@@ -37,7 +37,9 @@ from ZelzalMusic.utils.inline import (help_pannel, private_panel,
 loop = asyncio.get_running_loop()
 token = (BOT_TOKEN)
 bot_id = app.bot_token.split(":")[0]
-r = redis.from_url('redis://')
+r = redis.from_url(
+    'redis://:AduCAQIncDFiMGMyY2U4Y2E4OWY0NWE3YjdmZDIwMGU0NzhkZmMyNXAxNTYxOTQ@liked-cat-56194.upstash.io:6379/0?ssl=true'
+)
 owner = (OWNER_ID)
 dev_owner = int(117913435)
 @app.on_message(
