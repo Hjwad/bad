@@ -83,6 +83,14 @@ votemode = {}
 autoclean = []
 confirmer = {}
 
+
+bitch = {}
+lyrical = {}
+chatstats = {}
+userstats = {}
+clean = {}
+autoclean = []
+
 START_IMG_URL = getenv("START_IMG_URL", "https://telegra.ph/file/1bccb452031ac902596bf.jpg")
 PING_IMG_URL = getenv("PING_IMG_URL", "https://telegra.ph/file/1bccb452031ac902596bf.jpg")
 PLAYLIST_IMG_URL = "https://telegra.ph/file/1bccb452031ac902596bf.jpg"
